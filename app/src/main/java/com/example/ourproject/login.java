@@ -45,6 +45,7 @@ public class login extends AppCompatActivity {
                 String password =loginPassword.getText().toString();
                 if(!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     if (!password.isEmpty()){
+
                         auth.signInWithEmailAndPassword(email,password)
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override

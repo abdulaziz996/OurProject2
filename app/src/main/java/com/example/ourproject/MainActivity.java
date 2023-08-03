@@ -11,16 +11,21 @@ import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 VideoView videoView;
+    private FirebaseAuth auth;
+    private Button loginOutButton;
 
-ImageButton imageButton;
+    ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        auth = FirebaseAuth.getInstance();
+        loginOutButton = findViewById(R.id.logOut);
         videoView =findViewById(R.id.video);
 
         MediaController mediaController = new MediaController(MainActivity.this);
@@ -29,6 +34,16 @@ ImageButton imageButton;
 
         videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.welcome2));
 
+
+
+        loginOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                auth.signOut();
+                startActivity(new Intent(MainActivity.this, login.class));
+            }
+        });
     imageButton = (ImageButton) findViewById(R.id.msg);
     imageButton.setOnClickListener(new View.OnClickListener() {
         @Override
