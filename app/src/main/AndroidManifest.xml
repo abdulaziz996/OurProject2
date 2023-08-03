@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.OurProject" >
+        <activity
+            android:name="com.example.ourproject.FireBoat"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name="com.example.ourproject.hiking"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.Camp"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.Diving"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.draw"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.ten"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.Cakeart"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.LatteArt"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.Adventure"
+            android:exported="false" />
+      <activity
+          android:name=".Art"
+          android:exported="false"/>
+        <activity
+            android:name="com.example.ourproject.Cook"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.product"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.aboutus"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.activity_contact"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.login"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.ourproject.Singup"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>
